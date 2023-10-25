@@ -1,1 +1,3 @@
-{ "HELLO_WORLD": "Pozdrav svijete!" }
+{ "HELLO_WORLD": "Pozdrav svijete!",
+"WHEN_WHERE": "MJESTO I VRIJEME",
+"DETAILS":"DETALJI" }

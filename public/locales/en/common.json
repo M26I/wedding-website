@@ -1,1 +1,4 @@
-{ "HELLO_WORLD": "Hello, World!" }
+{ "HELLO_WORLD": "Hello, World!",
+ "WHEN_WHERE": "WHEN & WHERE",
+ "DETAILS": "DETAILS"
+}
