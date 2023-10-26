@@ -47,14 +47,14 @@ export default function Navbar() {
         <div className={corm.className}>
           <div className="pt-4 mx-auto">
             <div className="p-2">
-              <ul className="row text-textb">
+              <ul className="row text-textb font-bold">
                 <Link
                   href="/"
                   onClick={closeMenu}
 
-                  className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
-                >
-                  RSVP
+                  className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200 "
+                ><span className="border-2 border-textb p-2">RSVP</span>
+                  
                 </Link>
                 <Link
                   href="/"
@@ -114,10 +114,10 @@ export default function Navbar() {
                 ></div>
               </Link>
             </div>
-            <div className="text-2xl font-bold  lg:flex-grow text-right">
+            <div className="text-2xl font-bold lg:flex-grow text-right">
               <Link
                 href="/"
-                className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw "
+                className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw border-2 border-textb hover:border-offw"
 
               >
                 RSVP

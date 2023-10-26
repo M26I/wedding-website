@@ -1,3 +1,14 @@
 { "HELLO_WORLD": "Pozdrav svijete!",
 "WHEN_WHERE": "MJESTO I VRIJEME",
-"DETAILS":"DETALJI" }
+"DETAILS":"DETALJI",
+"MAIN_TITLE": "PRIDRUžITE NAM SE NA POčETKU NAšE NOVE AVANTURE",
+"WHEN": "18.06.2024. ",
+"WHERE": "Vila Dalmacija, Split",
+"TIMELINE": "Redosljed događanja",
+"CEREMONY": "Vjenčanje",
+"PHOTOS": "Fotografiranje",
+"WELCOME": "Dobrodošlica",
+"DINNER": "Večera",
+"CUTTING_CAKE": "Rezanje torte",
+"FIRST_DANCE": "Prvi ples",
+"PARTY": "Party" }
