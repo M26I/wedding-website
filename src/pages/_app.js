@@ -1,5 +1,6 @@
 
 import '@/styles/globals.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { appWithTranslation } from 'next-i18next';
 import { i18n } from 'next-i18next';
 import { useState, useEffect } from 'react';
