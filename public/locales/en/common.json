@@ -11,5 +11,11 @@
  "DINNER": "Dinner",
  "CUTTING_CAKE": "Cutting cake",
  "FIRST_DANCE": "First dance",
- "PARTY": "Party"
+ "PARTY": "Party",
+ "NAME": "Full name",
+ "CHECK": "Check",
+ "PHONE": "Phone",
+ "+1": "Name of your +1",
+ "SUBMIT": "Confirm",
+ "ATTENDENCE": "Please confirm your attendance by xx.yy"
 }

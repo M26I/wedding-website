@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next'
 import Header from '@/components/Header'
 import Navbar from '@/components/Nav'
 import VerticalTimeline from '@/components/Timeline'
-import Map from '@/components/Map'
+
 import dynamic from 'next/dynamic'
 
 
@@ -18,10 +18,7 @@ const corm = Cormorant_Upright({
 
 
 export default function Home() {
-  const Map = dynamic(() => import("@/components/Map"), {
-    loading: () => "Loading...",
-    ssr: false
-  })
+  
   
   
   const { t } = useTranslation()
@@ -65,7 +62,7 @@ export default function Home() {
       </div>
       </section>
 
-      <Map />
+      
       
     </>
   )

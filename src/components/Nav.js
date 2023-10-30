@@ -49,7 +49,7 @@ export default function Navbar() {
             <div className="p-2">
               <ul className="row text-textb font-bold">
                 <Link
-                  href="/"
+                  href="/rsvp"
                   onClick={closeMenu}
 
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200 "
@@ -116,7 +116,7 @@ export default function Navbar() {
             </div>
             <div className="text-2xl font-bold lg:flex-grow text-right">
               <Link
-                href="/"
+                href="/rsvp"
                 className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw border-2 border-textb hover:border-offw"
 
               >

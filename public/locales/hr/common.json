@@ -11,4 +11,10 @@
 "DINNER": "Večera",
 "CUTTING_CAKE": "Rezanje torte",
 "FIRST_DANCE": "Prvi ples",
-"PARTY": "Party" }
+"PARTY": "Party",
+"NAME": "Ime i prezime",
+"CHECK": "Provjeri",
+"PHONE": "Broj mobitela",
+"+1": "Ime osobe koja dolazi s tobom",
+"SUBMIT": "Potvrdi dolazak",
+"ATTENDENCE": "Molimo Vas da potvrdite dolazak najkasnije do xx.yy." }
