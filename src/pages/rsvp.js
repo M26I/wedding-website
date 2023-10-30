@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Head from "next/head";
 import Navbar from "@/components/Nav";
 import { Cormorant_Upright } from "next/font/google";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import app from "../../firebase";
+import {  database, storage } from "../../firebase";
 
 const corm = Cormorant_Upright({
     weight: "400",
@@ -11,6 +14,19 @@ const corm = Cormorant_Upright({
 
   export default function Rsvp(){
     const { t } = useTranslation()
+    const [found, setFound] = useState(false); 
+
+    // Function to handle the "Check" button click
+    const handleCheck = async () => {
+      const nameToCheck = document.getElementById('name').value; // Get the name input value
+  
+      // Use Firebase to check if the name exists in the database
+      const nameExists = await checkNameInDatabase(nameToCheck);
+  
+      // Update the state based on the result
+      setFound(nameExists);
+    };
+    const checkNameInDatabase = async (nameToCheck) => {}
 
     return(
         <>
@@ -36,7 +52,11 @@ const corm = Cormorant_Upright({
     <div className="mb-4">
         <label htmlFor="name" className="block font-bold mb-1 text-textb">{t("NAME")}:</label>
         <input type="text" id="name" name="name" className="border rounded w-full border-textb p-2 bg-offw" />
-        <button type="button" id="checkButton" className=" mt-2 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("CHECK")}</button>
+        <button
+         onClick={handleCheck}
+         type="button"
+         id="checkButton" 
+         className=" mt-2 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("CHECK")}</button>
     </div>
     <div id="step2" className="">
         <label htmlFor="email" className="block font-bold mb-1 text-textb">Email:</label>
