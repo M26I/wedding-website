@@ -25,7 +25,7 @@ const corm = Cormorant_Upright({
     if (nameToCheck.trim() !== "") {
       // Access the guest data within the "invited" array
       const invitedData = data[0].invited;
-      
+            
       // Check if the name exists in the guest data
       const nameExistsInDB = invitedData.some((guest) =>
       validNamePattern.test(guest.name) === validNamePattern.test(nameToCheck) &&
