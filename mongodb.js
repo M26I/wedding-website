@@ -19,6 +19,7 @@ async function connectToDatabase() {
 
     await client.connect();
   }
+  
 
   db = client.db("wedding-guests"); // Replace with your actual database name
 }
