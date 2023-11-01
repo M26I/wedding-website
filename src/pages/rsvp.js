@@ -33,7 +33,7 @@ const corm = Cormorant_Upright({
     );
     
 
-      setNameExists(nameExistsInDB);
+          setNameExists(nameExistsInDB);
     }
   };
   
