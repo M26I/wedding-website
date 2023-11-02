@@ -17,5 +17,8 @@
  "PHONE": "Phone",
  "+1": "Name of your +1",
  "SUBMIT": "Confirm",
- "ATTENDENCE": "Please confirm your attendance by xx.yy"
+ "ATTENDENCE": "Please confirm your attendance by xx.yy",
+ "CHECK_NAME_YES": "Great, you're on our list. Please fill in the form and confirm your attendance.",
+ "CHECK_NAME_NO": "Oops! It seems like something went wrong. Please double-check the spelling of your name and try again.",
+ "SUCCESS": "Thank you for confirming! We can't wait to see you. Your presence is greatly anticipated, and we're looking forward to a wonderful time together"
 }

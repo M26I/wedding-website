@@ -21,7 +21,23 @@ async function connectToDatabase() {
   }
   
 
-  db = client.db("wedding-guests"); // Replace with your actual database name
+  db = client.db("wedding-guests"); 
+}
+async function sendToConfirmedCollection(data) {
+  try {
+    if (!db) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection('confirmed');
+
+    // Insert the data into the "confirmed" collection
+    const result = await collection.insertOne(data);
+    console.log(`Data sent to "confirmed" collection: ${result.insertedId}`);
+  } catch (error) {
+    console.error('Error sending data to "confirmed" collection:', error);
+  }
 }
 
-export { connectToDatabase, db };
+
+export { sendToConfirmedCollection, connectToDatabase, db };

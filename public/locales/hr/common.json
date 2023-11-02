@@ -17,4 +17,7 @@
 "PHONE": "Broj mobitela",
 "+1": "Ime osobe koja dolazi s tobom",
 "SUBMIT": "Potvrdi dolazak",
-"ATTENDENCE": "Molimo Vas da potvrdite dolazak najkasnije do xx.yy." }
+"ATTENDENCE": "Molimo Vas da potvrdite dolazak najkasnije do xx.yy.",
+"CHECK_NAME_YES": "Odlično, tvoje ime je na listi uzvanika, molimo te upiši svoje podatke i potvrdi dolazak",
+"CHECK_NAME_NO": "Ups! Čini se da je nešto pošlo po zlu. Provjeri jesi li krivo napisao/la ime i pokušaj ponovno.",
+"SUCCESS": "Hvala na potvrdi, veselimo se vašem dolasku!" }
