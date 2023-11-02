@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { db, connectToDatabase } from "../../mongodb";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import Head from "next/head";
 import Navbar from "@/components/Nav";
 import { Cormorant_Upright } from "next/font/google";
@@ -14,31 +11,32 @@ import { useTranslation } from 'next-i18next'
 
 
 const corm = Cormorant_Upright({
-    weight: "400",
-    subsets: ['latin'],
-  })
+  weight: "400",
+  subsets: ['latin'],
+})
 
-  export default function Rsvp({ data}){
-    const router = useRouter();
-    const { t } = useTranslation()
-    const [nameToCheck, setNameToCheck] = useState("");
+export default function Rsvp({ data }) {
+  const router = useRouter();
+  const { t } = useTranslation()
+  const [nameToCheck, setNameToCheck] = useState("");
   const [nameExists, setNameExists] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [plusOne, setPlusOne] = useState(false);
- 
 
+
+  //submiting the form
 
   const handleFormSubmit = async (e) => {
-    
+
     e.preventDefault();
     const formData = {
       name: nameToCheck,
       email: "",
       phone: "",
       additionalName: "",
-      additionalName: "", 
+      additionalName: "",
     };
-   
+
     try {
       const response = await fetch("/api/submit-rsvp", {
         method: "POST",
@@ -49,11 +47,10 @@ const corm = Cormorant_Upright({
       });
 
       if (response.ok) {
-        const successMessage = t('SUCCESS'); // Use t from useTranslation
-        toast.success(successMessage); // Show success message
-        window.location.href = "/"; // Redirect to the home page
+        router.push("/thank-you");
       } else {
-        toast.error("RSVP submission failed"); // Show error message
+
+        console.error("RSVP submission failed.");
       }
     } catch (error) {
       console.error("Error submitting RSVP:", error);
@@ -61,24 +58,23 @@ const corm = Cormorant_Upright({
   }
 
 
-
   //checking the name
   function removeDiacritics(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
-  
+
   const handleCheckButtonClick = async () => {
     if (nameToCheck.trim() !== "") {
       const invitedData = data[0].invited;
-      
+
       const normalizedInput = removeDiacritics(nameToCheck.toLowerCase());
-  
+
       const selectedGuest = invitedData.find((guest) => {
         const normalizedGuestName = removeDiacritics(guest.name.toLowerCase());
         return normalizedGuestName === normalizedInput;
       });
-     
-  
+
+
       if (selectedGuest) {
         setNameExists(true);
         setPlusOne(selectedGuest.plusOne);
@@ -87,117 +83,112 @@ const corm = Cormorant_Upright({
         setPlusOne(false); // Set to false by default if the name doesn't exist
       }
 
-     
+
     }
   };
-  
-  
-  
-     
-    
-    
 
-    return(
-        <>
-         <Head>
+
+
+
+
+
+
+  return (
+    <>
+      <Head>
         <title>Marija & Liam - RSVP</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Navbar  />
+      <Navbar />
       <section className={corm.className}>
-      <div className="pt-12 md:pt-40 bg-maingreen"></div>
-      <div className="bg-offw">
-      <div className="mx-auto w-5/6 pt-10 md:pt-16 ">
+        <div className="pt-12 lg:pt-40 bg-maingreen"></div>
+        <div className="bg-offw">
+          <div className="mx-auto w-5/6 pt-10 md:pt-16 ">
             <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center">RSVP</h1>
-            
+
             <p className="text-textb text-center pt-6 text-xl md:text-3xl">{t("ATTENDENCE")}</p>
+          </div>
         </div>
-        </div>
-      <div className="min-h-screen flex items-center justify-center pt-6 bg-offw">
-            
-        
-      <form
-      onSubmit={(e) => {
-        e.preventDefault(); // Prevent the default form submission behavior
-        handleFormSubmit(e); // Pass the event object to the submit function
-      }}
-      className=" mx-auto md:w-2/6 w-5/6 p-4 bg-maingreen rounded-lg shadow-lg border-2 border-textb">
-    <div className="mb-4">
-        <label htmlFor="name"
-         className="block font-bold mb-1 text-textb">{t("NAME")}:</label>
-        <input
-         type="text"
-          id="name" 
-          name="name"
-           className="border rounded w-full border-textb p-2 bg-offw" 
-           value={nameToCheck}
-          onChange={(e) => setNameToCheck(e.target.value)}/>
-           
-        <button
-          onClick={() => {
-            handleCheckButtonClick();
-            setIsButtonClicked(true);
-          }}
-         type="button"
-         id="checkButton" 
-         className=" mt-2 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("CHECK")}</button>
-         
-    </div>
-    {isButtonClicked && nameToCheck.trim() !== "" && ( 
-  nameExists ? (
-    <p className="text-textb">{t("CHECK_NAME_YES")}</p>
-  ) : (
-    <p className="text-textb">{t("CHECK_NAME_NO")}</p>
-  )
-)}
-   {isButtonClicked && nameExists && (
-    <div id="step2" className="">
-        <label htmlFor="email" className="block font-bold mb-1 text-textb">Email:</label>
-        <input type="email" id="email" name="email" className="border rounded w-full p-2 border-textb bg-offw" />
-        
-        <label htmlFor="phone" className="block font-bold mb-1 text-textb">{t("PHONE")}:</label>
-        <input type="tel" id="phone" name="phone" className="border rounded w-full p-2" />
-    </div>
-   )}
-    {isButtonClicked && nameExists && plusOne && (
-    <div id="step3" className="">
-        <label htmlFor="additionalName" className="block font-bold mb-1 text-textb">{t("+1")}:</label>
-        <input type="text" id="additionalName" name="additionalName" className="border rounded w-full p-2  border-textb bg-offw" />
-        
-        
-    </div>
-    )}
-    {isButtonClicked && nameExists && (
-    <button type="submit" className="mt-2 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("SUBMIT")}</button>
-    )}
-    </form>
+        <div className="min-h-screen flex flex-col items-center  bg-offw">
 
-      </div>
-    
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault(); // Prevent the default form submission behavior
+              handleFormSubmit(e); // Pass the event object to the submit function
+            }}
+            className=" mx-auto md:w-2/6 w-5/6 p-4 bg-maingreen rounded-lg shadow-lg border-2 border-textb mt-10 md:mt-16">
+            <div className="mb-4">
+              <label htmlFor="name"
+                className="block font-bold mb-1 mt-1 text-textb">{t("NAME")}:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="border rounded w-full border-textb p-2 bg-offw"
+                value={nameToCheck}
+                onChange={(e) => setNameToCheck(e.target.value)} />
+
+              <button
+                onClick={() => {
+                  handleCheckButtonClick();
+                  setIsButtonClicked(true);
+                }}
+                type="button"
+                id="checkButton"
+                className=" mt-3 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("CHECK")}</button>
+
+            </div>
+            {isButtonClicked && nameToCheck.trim() !== "" && (
+              nameExists ? (
+                <p className="text-textb">{t("CHECK_NAME_YES")}</p>
+              ) : (
+                <p className="text-textb">{t("CHECK_NAME_NO")}</p>
+              )
+            )}
+            {isButtonClicked && nameExists && (
+              <div id="step2" className="">
+                <label htmlFor="email" className="block font-bold mb-1 mt-1 text-textb">Email:</label>
+                <input type="email" id="email" name="email" className="border rounded w-full p-2 border-textb bg-offw" />
+
+                <label htmlFor="phone" className="block font-bold mb-1 mt-1 text-textb">{t("PHONE")}:</label>
+                <input type="tel" id="phone" name="phone" className="border rounded w-full p-2" />
+              </div>
+            )}
+            {isButtonClicked && nameExists && plusOne && (
+              <div id="step3" className="">
+                <label htmlFor="additionalName" className="block font-bold mb-1 mt-1 text-textb">{t("+1")}:</label>
+                <input type="text" id="additionalName" name="additionalName" className="border rounded w-full p-2  border-textb bg-offw" />
+
+
+              </div>
+            )}
+            {isButtonClicked && nameExists && (
+              <button type="submit" className="mt-3 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("SUBMIT")}</button>
+            )}
+          </form>
+
+        </div>
+
       </section>
-      <ToastContainer  position="top-center"
-  autoClose={5000}
-  closeButton={false} // If you don't want a close button
-  pauseOnHover={false} // If you don't want pausing on hover
-  style={{ zIndex: 9999 }}/>
-        </>
-    )
-  }
-  export async function getStaticProps(context) {
-    const { locale } = context;
-  
-    await connectToDatabase();
-    const collection = db.collection("invited");
-    const data = await collection.find({}, { projection: { _id: 0 } }).toArray();
 
-    
-  
-    return {
-      props: {
-        ...(await serverSideTranslations(locale)),
-        data,
-      },
-    };
-  }
-  
+    </>
+  )
+}
+export async function getStaticProps(context) {
+  const { locale } = context;
+
+  await connectToDatabase();
+  const collection = db.collection("invited");
+  const data = await collection.find({}, { projection: { _id: 0 } }).toArray();
+
+
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+      data,
+    },
+  };
+}

@@ -57,7 +57,7 @@ export default function Navbar() {
                   
                 </Link>
                 <Link
-                  href="/"
+                  href="/when&where"
 
                   onClick={closeMenu}
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
@@ -65,7 +65,7 @@ export default function Navbar() {
                  {t("WHEN_WHERE")}
                 </Link>
                 <Link
-                  href="/"
+                  href="/details"
 
                   onClick={closeMenu}
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
@@ -124,14 +124,14 @@ export default function Navbar() {
                
               </Link>
               <Link
-                href="/"
+                href="/when&where"
                 className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
 
               >
                {t("WHEN_WHERE")}
               </Link>
               <Link
-                href="/"
+                href="/details"
                 className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
 
               >
