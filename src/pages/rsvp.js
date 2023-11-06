@@ -15,13 +15,18 @@ const corm = Cormorant_Upright({
   subsets: ['latin'],
 })
 
-export default function Rsvp({ data }) {
+export default function Rsvp({ data, confirmedData }) {
   const router = useRouter();
   const { t } = useTranslation()
   const [nameToCheck, setNameToCheck] = useState("");
   const [nameExists, setNameExists] = useState(false);
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [plusOne, setPlusOne] = useState(false);
+  const [confirmedNameExists, setConfirmedNameExists] = useState(false);
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [additionalName, setAdditionalName] = useState("");
+
 
 
   //submiting the form
@@ -31,10 +36,10 @@ export default function Rsvp({ data }) {
     e.preventDefault();
     const formData = {
       name: nameToCheck,
-      email: "",
-      phone: "",
-      additionalName: "",
-      additionalName: "",
+      email,
+      phone,
+      additionalName,
+
     };
 
     try {
@@ -66,31 +71,46 @@ export default function Rsvp({ data }) {
   const handleCheckButtonClick = async () => {
     if (nameToCheck.trim() !== "") {
       const invitedData = data[0].invited;
-
       const normalizedInput = removeDiacritics(nameToCheck.toLowerCase());
+
+
 
       const selectedGuest = invitedData.find((guest) => {
         const normalizedGuestName = removeDiacritics(guest.name.toLowerCase());
         return normalizedGuestName === normalizedInput;
       });
 
-
       if (selectedGuest) {
         setNameExists(true);
         setPlusOne(selectedGuest.plusOne);
+
+               const confirmedGuest = confirmedData?.find((guest) => {
+          const normalizedGuestName = removeDiacritics(guest.name.toLowerCase());
+          const normalizedAdditionalName = guest.additionalName
+            ? removeDiacritics(guest.additionalName.toLowerCase())
+            : null;
+          return (
+            normalizedGuestName === normalizedInput ||
+            (normalizedAdditionalName && normalizedAdditionalName === normalizedInput)
+          );
+        });
+
+
+        if (confirmedGuest) {
+          setConfirmedNameExists(true);
+
+        } else {
+          setConfirmedNameExists(false);
+
+        }
       } else {
         setNameExists(false);
-        setPlusOne(false); // Set to false by default if the name doesn't exist
+        setPlusOne(false);
+        setConfirmedNameExists(false);
+
       }
-
-
     }
   };
-
-
-
-
-
 
 
   return (
@@ -141,30 +161,34 @@ export default function Rsvp({ data }) {
 
             </div>
             {isButtonClicked && nameToCheck.trim() !== "" && (
-              nameExists ? (
+              nameExists && !confirmedNameExists ? (
                 <p className="text-textb">{t("CHECK_NAME_YES")}</p>
+              ) : confirmedNameExists ? (
+                <p className="text-textb">{t("RSVP_BEFORE")}</p>
               ) : (
                 <p className="text-textb">{t("CHECK_NAME_NO")}</p>
               )
             )}
-            {isButtonClicked && nameExists && (
+
+
+            {isButtonClicked && nameExists && !confirmedNameExists && (
               <div id="step2" className="">
                 <label htmlFor="email" className="block font-bold mb-1 mt-1 text-textb">Email:</label>
-                <input type="email" id="email" name="email" className="border rounded w-full p-2 border-textb bg-offw" />
+                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} className="border rounded w-full p-2 border-textb bg-offw" />
 
                 <label htmlFor="phone" className="block font-bold mb-1 mt-1 text-textb">{t("PHONE")}:</label>
-                <input type="tel" id="phone" name="phone" className="border rounded w-full p-2" />
+                <input type="tel" id="phone" onChange={(e) => setPhone(e.target.value)} name="phone" value={phone} className="border rounded w-full p-2" />
               </div>
             )}
-            {isButtonClicked && nameExists && plusOne && (
+            {isButtonClicked && nameExists && !confirmedNameExists && plusOne && (
               <div id="step3" className="">
                 <label htmlFor="additionalName" className="block font-bold mb-1 mt-1 text-textb">{t("+1")}:</label>
-                <input type="text" id="additionalName" name="additionalName" className="border rounded w-full p-2  border-textb bg-offw" />
+                <input type="text" id="additionalName" onChange={(e) => setAdditionalName(e.target.value)} value={additionalName} name="additionalName" className="border rounded w-full p-2  border-textb bg-offw" />
 
 
               </div>
             )}
-            {isButtonClicked && nameExists && (
+            {isButtonClicked && nameExists && !confirmedNameExists && (
               <button type="submit" className="mt-3 bg-textb  border border-maingreen text-maingreen font-semibold rounded p-2 hover:border hover:border-textb hover:bg-maingreen hover:text-textb cursor-pointer">{t("SUBMIT")}</button>
             )}
           </form>
@@ -182,6 +206,10 @@ export async function getStaticProps(context) {
   await connectToDatabase();
   const collection = db.collection("invited");
   const data = await collection.find({}, { projection: { _id: 0 } }).toArray();
+  const confirmedCollection = db.collection("confirmed");
+  const confirmedData = await confirmedCollection.find({}, { projection: { _id: 0 } }).toArray();
+
+
 
 
 
@@ -189,6 +217,7 @@ export async function getStaticProps(context) {
     props: {
       ...(await serverSideTranslations(locale)),
       data,
+      confirmedData,
     },
   };
 }
