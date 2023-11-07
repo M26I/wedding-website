@@ -3,7 +3,7 @@ const Header = () => {
         <>
             <div className="hidden lg:block mb-6 pt-36 ">
                 <div className="relative h-screen">
-                    <div className="h-full bg-center bg-cover" style={{ backgroundImage: 'url("/collage.svg")' }}>
+                    <div className="h-full bg-center bg-cover" style={{ backgroundImage: 'url("/collage2.svg")' }}>
                         
                     </div>
 
@@ -13,7 +13,7 @@ const Header = () => {
             </div>
 
             <div className='block lg:hidden'>
-                <div className=" h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/collage-p.svg")' }}>
+                <div className=" h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/collage-p2.svg")' }}>
                 
 
                 </div>
