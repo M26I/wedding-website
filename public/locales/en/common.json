@@ -21,5 +21,6 @@
  "CHECK_NAME_YES": "Great, you're on our list. Please fill in the form and confirm your attendance.",
  "CHECK_NAME_NO": "Oops! It seems like something went wrong. Please double-check the spelling of your name and try again.",
  "SUCCESS": "Thank you for confirming! We can't wait to see you. Your presence is greatly anticipated, and we're looking forward to a wonderful time together",
- "RSVP_BEFORE":"It seems that your arrival is already confirmed. If you haven't personally confirmed that you are coming, someone may have added you as +1"
+ "RSVP_BEFORE":"It seems that your arrival is already confirmed. If you haven't personally confirmed that you are coming, someone may have added you as +1",
+ "PLACE": "The wedding ceremony and celebration will take place at Villa Dalmacija, located at Ivan Meštrović Promenade 43 in Split. The villa is situated on the southern slopes of Marjan hill, and there is secured parking available for all guests on the premises. Gathering on the villa's terrace will begin at 5:00 PM, followed by the ceremony on the pier at 6:00 PM."
 }

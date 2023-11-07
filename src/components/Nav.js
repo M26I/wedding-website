@@ -96,8 +96,7 @@ export default function Navbar() {
   return (
     <div className={corm.className}>
       <nav
-        className={`fixed w-full z-50 transition duration-300 ease-in-out text-textb ${!top && "bg-maingreen shadow-lg text-textb"
-          } hidden md:block z-50`}
+        className={`fixed w-full z-50 transition duration-300 ease-in-out text-textb bg-maingreen hidden md:block z-50`}
       >
         <div className="w-5/6 mx-auto">
           <div className="hidden lg:visible w-full block flex-grow lg:flex lg:items-center lg:w-auto grid grid-cols-2 text-text-dark font-bold  py-6 ">

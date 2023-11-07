@@ -65,8 +65,12 @@ export default function Rsvp({ data, confirmedData }) {
 
   //checking the name
   function removeDiacritics(str) {
+    
+    str = str.replace(/đ/g, 'd');
+    
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
+  
 
   const handleCheckButtonClick = async () => {
     if (nameToCheck.trim() !== "") {
@@ -215,7 +219,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale)),
+      ...(await serverSideTranslations(locale, ['common'])),
       data,
       confirmedData,
     },

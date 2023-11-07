@@ -35,7 +35,7 @@ export default function Home() {
 
       <Header />
       <section className={corm.className}>
-        <div className='mx-auto w-5/6  pt-10 pb-10 md:pb-20 md:pt-20'>
+        <div className='mx-auto w-5/6 pt-10 pb-10 md:pb-20 md:pt-20'>
           <h1 className=' uppercase  text-2xl  font-bold md:text-5xl text-textb text-center'>{t("MAIN_TITLE")}</h1>
           <p className='text-lg md:text-3xl text-textb text-center pt-10 md:pt-16 font-bold'>{t("WHEN")}</p>
           <p className='text-lg md:text-3xl text-textb text-center  pt-2 md:pt-4 font-bold'>{t("WHERE")}</p>
@@ -74,7 +74,7 @@ export async function getStaticProps(context) {
   return {
     props: {
 
-      ...(await serverSideTranslations(locale)),
+      ...(await serverSideTranslations(locale, ['common'])),
     },
   }
 }

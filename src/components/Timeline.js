@@ -13,22 +13,22 @@ const VerticalTimeline = () => {
 
   const timelineData = [
     {
-      time: '00:00',
+      time: '17:00',
+      title: 'Welcome',
+      description: t('WELCOME'),
+      icon: '/welcome.svg',
+    },
+    {
+      time: '18:00',
       title: 'Ceremony',
-      description: t('CEREMONY'),
+      description: t("CEREMONY"),
       icon: '/ceremony.svg',
     },
     {
       time: '00:00',
-      title: 'Photos',
+      title: 'photos',
       description: t("PHOTOS"),
       icon: '/photos.svg',
-    },
-    {
-      time: '00:00',
-      title: 'Welcome',
-      description: t("WELCOME"),
-      icon: '/welcome.svg',
     },
     {
       time: '00:00',
