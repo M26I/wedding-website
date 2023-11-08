@@ -10,10 +10,7 @@
     
     
 }
-.fade {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
+
 
   .logo {
     background-image: url("/logo2.svg");

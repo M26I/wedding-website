@@ -21,6 +21,24 @@ const corm = Cormorant_Upright({
 export default function Navbar() {
     const { t } = useTranslation('common'); 
     const router = useRouter();
+    const [selectedLocale, setSelectedLocale] = useState(router.locale);
+
+    useEffect(() => {
+      setSelectedLocale(router.locale);
+    }, [router.locale]);
+  
+    const handleLocaleChange = (e) => {
+      const newLocale = e.target.value;
+      router.push(
+        {
+          pathname: router.pathname,
+          query: router.query,
+        },
+        null,
+        { locale: newLocale }
+      );
+      setSelectedLocale(newLocale);
+    };
    
   
 
@@ -141,7 +159,7 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/details"
-                className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
+                className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw "
 
               >
                {t("DETAILS")}
@@ -149,39 +167,16 @@ export default function Navbar() {
 
              
 
-             <Link 
-             href="/hr"
-             className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
-             >HR</Link>
-              <Link 
-             href="/en"
-             className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
-             >EN</Link>
 
 <select
-        className='p-2  cursor-pointer'
-        onChange={(e) =>
-          router.push(
-            {
-              pathname: router.pathname,
-              query: router.query,
-            },
-            null,
-            { locale: e.target.value }
-          )
-        }
+        className='bg-maingreen  cursor-pointer text-offw'
+        value={selectedLocale}
+        onChange={handleLocaleChange}
       >
-        <option value='en'>EN</option>
-        <option value='hr'>HR</option>
+        <option className="p-2 text-lg" value='en'>EN</option>
+        <option className="p-2 text-lg" value='hr'>HR</option>
       </select>
-             
-
-
-
-
-
-
-             
+                      
 
 
 
@@ -212,7 +207,15 @@ export default function Navbar() {
               ></div>
             </Link>
           </div>
-          <div className="p-5 right-0 fixed">
+          <select
+        className='bg-maingreen  cursor-pointer mr-20 text-textb text-xl  '
+        value={selectedLocale}
+        onChange={handleLocaleChange}
+      >
+        <option  value='en'>EN</option>
+        <option  value='hr'>HR</option>
+      </select>
+          <div className="p-5 right-0 fixed">            
             <div
               className="menu-btn"
               onClick={() => setShowMenu(!showMenu)}
