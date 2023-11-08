@@ -67,9 +67,9 @@ export default function Home() {
     </>
   )
 }
-export async function getStaticProps(context) {
+export async function getStaticProps({locale}) {
 
-  const { locale } = context
+ 
 
   return {
     props: {

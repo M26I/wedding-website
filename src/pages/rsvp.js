@@ -204,8 +204,8 @@ export default function Rsvp({ data, confirmedData }) {
     </>
   )
 }
-export async function getStaticProps(context) {
-  const { locale } = context;
+export async function getStaticProps({locale}) {
+  
 
   await connectToDatabase();
   const collection = db.collection("invited");

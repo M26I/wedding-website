@@ -31,9 +31,9 @@ export default function ThankYou() {
     </>
   )
 }
-export async function getStaticProps(context) {
+export async function getStaticProps({locale}) {
 
-  const { locale } = context
+  
 
   return {
     props: {

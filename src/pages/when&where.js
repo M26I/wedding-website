@@ -18,7 +18,7 @@ export default function WhenWhere() {
   return (
     <>
       <Head>
-        <title>Marija & Liam - {t("WHEN_WHERE")} </title>
+        <title>Marija & Liam  </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
@@ -44,8 +44,14 @@ export default function WhenWhere() {
         
 
         </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 pt-10 md:pt-32 ">
+        <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32 ">
+        
+
          <GoogleMap />
+         <div className={corm.className}>
+         <p className=" text-textb text-center pb-6 text-xl xl:text-3xl md:pr-6  xl:pt-32 lg:pt-8">{t("ADDRESS")}</p>
+         </div>
+
         </div>
       </section>
 
@@ -53,9 +59,9 @@ export default function WhenWhere() {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps({locale}) {
 
-  const { locale } = context
+  
 
   return {
     props: {

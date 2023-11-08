@@ -3,6 +3,8 @@ import Link from "next/link";
 import Hamburger from "./Hamburger";
 import { Cormorant_Upright } from "next/font/google";
 import { useTranslation } from 'next-i18next';
+import { useRouter } from "next/router";
+
 
 
 
@@ -18,6 +20,12 @@ const corm = Cormorant_Upright({
 
 export default function Navbar() {
     const { t } = useTranslation('common'); 
+    const router = useRouter();
+   
+  
+
+  
+
     
     
 
@@ -72,6 +80,8 @@ export default function Navbar() {
                 >
                  {t("DETAILS")}
                 </Link>
+
+           
 
 
 
@@ -136,6 +146,42 @@ export default function Navbar() {
               >
                {t("DETAILS")}
               </Link>
+
+             
+
+             <Link 
+             href="/hr"
+             className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
+             >HR</Link>
+              <Link 
+             href="/en"
+             className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
+             >EN</Link>
+
+<select
+        className='p-2  cursor-pointer'
+        onChange={(e) =>
+          router.push(
+            {
+              pathname: router.pathname,
+              query: router.query,
+            },
+            null,
+            { locale: e.target.value }
+          )
+        }
+      >
+        <option value='en'>EN</option>
+        <option value='hr'>HR</option>
+      </select>
+             
+
+
+
+
+
+
+             
 
 
 
