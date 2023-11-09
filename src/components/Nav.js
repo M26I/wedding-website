@@ -212,8 +212,8 @@ export default function Navbar() {
         value={selectedLocale}
         onChange={handleLocaleChange}
       >
-        <option  value='en'>EN</option>
-        <option  value='hr'>HR</option>
+        <option  value='en'>en</option>
+        <option  value='hr'>hr</option>
       </select>
           <div className="p-5 right-0 fixed">            
             <div
