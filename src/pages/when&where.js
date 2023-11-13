@@ -24,12 +24,14 @@ export default function WhenWhere() {
       </Head>
       <Navbar />
       <div className="pt-12 lg:pt-40 bg-maingreen"></div>
-      <section className='pt-12 mx-auto w-5/6 pb-10 md:pb-16'>
+      
+      
+      <section className='pt-12 mx-auto w-5/6 pb-10 md:pb-16 '>
         <div className={corm.className}>
-        <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16">{t("WHEN_WHERE")}</h1>
+        <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16 ">{t("WHEN_WHERE")}</h1>
 
         <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32">
-  <p className="text-textb text-center pb-6 text-xl xl:text-3xl md:pr-6  xl:pt-14 lg:pt-8">{t("PLACE")}</p>
+  <p className="text-textb text-center pb-10 text-xl xl:text-3xl md:pr-6 ">{t("PLACE")}</p>
   <Image
     src="/vilad.jpg"
     alt="Vila Dalmatia"
@@ -46,7 +48,7 @@ export default function WhenWhere() {
         </div>
         <div className=" block lg:hidden grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-16  ">
         <div className={corm.className}>
-         <p className=" text-textb text-center pb-6 text-xl xl:text-3xl md:pl-6 md:pb-16 ">{t("ADDRESS")}</p>
+         <p className=" text-textb text-center pb-10 text-xl xl:text-3xl md:pl-6 md:pb-16 ">{t("ADDRESS")}</p>
          </div>
 
          <GoogleMap />
@@ -59,11 +61,12 @@ export default function WhenWhere() {
 
          <GoogleMap />
          <div className={corm.className}>
-         <p className=" text-textb text-center pb-6 text-xl xl:text-3xl md:pl-6  ">{t("ADDRESS")}</p>
+         <p className="text-textb text-center pb-6 text-xl xl:text-3xl md:pl-6  ">{t("ADDRESS")}</p>
          </div>
 
         </div>
       </section>
+     
 
     </>
   )
