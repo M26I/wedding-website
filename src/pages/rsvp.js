@@ -122,7 +122,7 @@ export default function Rsvp({ data, confirmedData }) {
       <Head>
         <title>Marija & Liam - RSVP</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.svg" purpose="maskable" />
       </Head>
       <Navbar />
       <section className={corm.className}>
