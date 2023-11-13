@@ -44,12 +44,22 @@ export default function WhenWhere() {
         
 
         </div>
-        <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32 ">
+        <div className=" block lg:hidden grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-16  ">
+        <div className={corm.className}>
+         <p className=" text-textb text-center pb-6 text-xl xl:text-3xl md:pl-6 md:pb-16 ">{t("ADDRESS")}</p>
+         </div>
+
+         <GoogleMap />
+        
+
+        </div>
+
+        <div className=" hidden lg:grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32 ">
         
 
          <GoogleMap />
          <div className={corm.className}>
-         <p className=" text-textb text-center pb-6 text-xl xl:text-3xl md:pr-6  xl:pt-32 lg:pt-8">{t("ADDRESS")}</p>
+         <p className=" text-textb text-center pb-6 text-xl xl:text-3xl md:pl-6  ">{t("ADDRESS")}</p>
          </div>
 
         </div>

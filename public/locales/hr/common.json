@@ -2,7 +2,7 @@
 "WHEN_WHERE": "MJESTO I VRIJEME",
 "DETAILS":"DETALJI",
 "MAIN_TITLE": "PRIDRUžITE NAM SE NA POčETKU NAšE NOVE AVANTURE",
-"WHEN": "18.06.2024. ",
+"WHEN": "18.06.2024. 17:00h",
 "WHERE": "Vila Dalmacija, Split",
 "TIMELINE": "Redosljed događanja",
 "CEREMONY": "Vjenčanje",
@@ -22,5 +22,7 @@
 "CHECK_NAME_NO": "Ups! Čini se da je nešto pošlo po zlu. Provjeri jesi li krivo napisao/la ime i pokušaj ponovno.",
 "SUCCESS": "Hvala na potvrdi, veselimo se vašem dolasku!",
 "RSVP_BEFORE": "Čini se da je tvoj dolazak već potvrđen. Ako nisi osobno potvrdio/la da dolaziš, možda te je netko dodao kao pratnju.",
-"PLACE": "Ceremonija i proslava vjenčanja održati će se u Vili Dalmaciji. Vila se nalazi na južnim padinama Marjana, a za sve goste osiguran je ograđeni paking u sklopu iste. Okupljanje na terasi vile započinje u 17:00h, te slijedi ceremonija na mulu u 18:00h. ",
-"ADDRESS": "Vila Dalmacija, Šetalište Ivana Meštrovića 43, Split." }
+"PLACE": "Vjenčanje i proslava održat će se u Villi Dalmacija, smještenoj na južnim padinama Marjana. Ova povijesna vila ima privatnu plažu i dok, stvarajući slikoviti ambijent za naš poseban dan. Kako bismo vaše iskustvo učinili još ugodnijim, za sve goste osiguran je privatni parking. ",
+"ADDRESS": " Fun fact! Zakoračit ćete u šarm stvarnog života Igre prijestolja, jer je Villa Dalmacija imala ulogu u prikazu veličanstvenog kraljevstva Dorne. Pridružite nam se u danu ispunjenom ljubavlju, smijehom i daškom fantazije! Okupljanje na terasi vile započinje u 17:00h, te slijedi ceremonija na mulu u 18:00h.",
+"PLACE_HOME": "Ceremonija i proslava vjenčanja održati će se u Vili Dalmaciji. Vila se nalazi na južnim padinama Marjana, a za sve goste osiguran je ograđeni paking u sklopu iste. Više detalja i kartu, možeš pronaći na stranici 'Mjesto i vrijeme'"
+}
