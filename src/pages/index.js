@@ -60,11 +60,9 @@ export default function Home() {
 
         </div>
         <div className="sticky top-0 bg-white h-full">
-          <section className='pt-12 mx-auto w-5/6 pb-12 md:pb-32'>
+          <section className='pt-12 mx-auto w-5/6 pb-12 md:pb-20'>
             <div className={corm.className}>
-              <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16">{t("WHEN_WHERE")}</h1>
-
-              <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32 pb-10">
+              <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-16 pb-10">
                 <p className="text-textb text-center pb-6 text-xl xl:text-3xl md:pr-6  xl:pt-14 lg:pt-8">{t("PLACE_HOME")}</p>
                 <Image
                   src="/vilad.jpg"
