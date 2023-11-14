@@ -19,15 +19,15 @@ export default function WhenWhere() {
   return (
     <>
       <Head>
-        <title>{`Marija & Liam - ${t("WHEN_WHERE")}`}</title>
+        <title>{`Marija & Liam - ${t("M_TITLE_WHEN&WHERE")}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" purpose="maskable" />
       </Head>
       <Navbar />
       <div className="pt-12 lg:pt-40 bg-maingreen"></div>
       
-      
-      <section className='pt-12 mx-auto w-5/6 pb-10 md:pb-16 '>
+      <div className=" bg-white bg-cover h-full"  style={{ backgroundImage: 'url("/bkg2.svg")' }}>
+      <section className='pt-12 mx-auto w-5/6 pb-10 md:pb-'>
         <div className={corm.className}>
         <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16 ">{t("WHEN_WHERE")}</h1>
 
@@ -67,7 +67,7 @@ export default function WhenWhere() {
 
         </div>
       </section>
-     
+      </div>
 
     </>
   )

@@ -38,7 +38,7 @@ export default function Home() {
 
         <Header />
 
-        <div className="sticky top-0  bg-white">
+        <div className="sticky top-0  bg-white h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
           <section className={corm.className}>
             <div className='mx-auto w-5/6 pt-10 pb-10 md:pb-20 md:pt-20'>
               <h1 className=' uppercase  text-2xl  font-bold md:text-5xl text-textb text-center'>{t("MAIN_TITLE")}</h1>
@@ -59,7 +59,7 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="sticky top-0 bg-white h-full">
+        <div className="sticky top-0 bg-white h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
           <section className='pt-12 mx-auto w-5/6 pb-12 md:pb-20'>
             <div className={corm.className}>
               <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-16 pb-10">
@@ -95,7 +95,7 @@ export default function Home() {
 
         </div>
 
-        <div className="sticky top-0 h-full bg-white pb-16">
+        <div className="sticky top-0 h-full bg-white pb-16 h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
           <div className={corm.className}>
             <h2 className='text-center text-textb text-2xl md:text-5xl font-bold uppercase pb-16 pt-16'>{t("TIMELINE")}</h2>
             <VerticalTimeline />

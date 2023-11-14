@@ -120,21 +120,21 @@ export default function Rsvp({ data, confirmedData }) {
   return (
     <>
       <Head>
-        <title>Marija & Liam - RSVP</title>
+        <title>{`Marija & Liam - ${t("M_TITLE_RSVP")}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" purpose="maskable" />
       </Head>
       <Navbar />
       <section className={corm.className}>
         <div className="pt-12 lg:pt-40 bg-maingreen"></div>
-        <div className="bg-offw">
+        <div className=" bg-white bg-cover h-full" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
           <div className="mx-auto w-5/6 pt-10 md:pt-16 ">
             <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center">RSVP</h1>
 
             <p className="text-textb text-center pt-6 text-xl md:text-3xl">{t("ATTENDENCE")}</p>
           </div>
         </div>
-        <div className="min-h-screen flex flex-col items-center  bg-offw">
+        <div className="min-h-screen flex flex-col items-center  bg-white bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
 
 
           <form

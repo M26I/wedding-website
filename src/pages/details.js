@@ -16,7 +16,7 @@ export default function Details() {
   return (
     <>
       <Head>
-        <title>Marija & Liam  </title>
+        <title>{`Marija & Liam - ${t("M_TITLE_DETAILS")}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" purpose="maskable" />
       </Head>

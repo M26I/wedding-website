@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <>
-            <div className="hidden md:block mb-6 lg:pt-36 pt-20 ">
+            <div className="hidden md:block  lg:pt-36 pt-20 ">
                 <div className="relative h-screen">
                     <div className="h-full bg-center bg-cover" style={{ backgroundImage: 'url("/collage2.svg")' }}>
                         

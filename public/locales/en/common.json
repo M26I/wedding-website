@@ -24,5 +24,9 @@
  "RSVP_BEFORE":"It seems that your arrival is already confirmed. If you haven't personally confirmed that you are coming, someone may have added you as +1",
  "PLACE": "The wedding ceremony and celebration will take place at Villa Dalmacija, Nestled on the southern slopes of Marjan hill, this historic villa boasts a private beach and dock, creating a picturesque setting for our special day. To make your experience even more enjoyable, rest assured that secured parking is available on the premises for all our cherished guests. ",
  "ADDRESS": "As an intriguing tidbit, you'll be stepping into the real-life charm of Game of Thrones, as Villa Dalmacija played a role in depicting the majestic realm of Dorne. Join us for a day filled with love, laughter, and a touch of fantasy at this remarkable venue!.  Gathering on the villa's terrace will begin at 5:00 PM, followed by the ceremony on the pier at 6:00 PM.",
-  "PLACE_HOME": "The wedding ceremony and celebration will take place at Villa Dalmacija, located on the southern slopes of Marjan hill, and there is secured parking available for all guests on the premises. For more details and map please check 'When & Where' page."
+  "PLACE_HOME": "The wedding ceremony and celebration will take place at Villa Dalmacija, located on the southern slopes of Marjan hill, and there is secured parking available for all guests on the premises. For more details and map please check 'When & Where' page.",
+  "M_TITLE_DETAILS": "Details",
+  "M_TITLE_WHEN&WHERE": "When & Where",
+  "M_TITLE_THANKS": "Thank you",
+  "M_TITLE_RSVP": "RSVP"
 }
