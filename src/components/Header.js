@@ -6,7 +6,7 @@ const Header = () => {
                     <div className="h-full bg-center bg-cover" style={{ backgroundImage: 'url("/collage2.svg")' }}>
                         
                     </div>
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                    <div className="absolute inset-0 bg-black opacity-40"></div>
       
 
                 </div>
@@ -19,7 +19,7 @@ const Header = () => {
                 
 
                 </div>
-                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="absolute inset-0 bg-black opacity-40"></div>
 
             </div>
         </>
