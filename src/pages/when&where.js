@@ -6,6 +6,7 @@ import { Cormorant_Upright } from "next/font/google";
 import Image from "next/image";
 import GoogleMap from "@/components/map";
 
+
 const corm = Cormorant_Upright({
   weight: "400",
   subsets: ['latin'],
@@ -68,6 +69,14 @@ export default function WhenWhere() {
         </div>
       </section>
       </div>
+
+
+
+
+      <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32">
+  <p className="text-textb text-center pb-10 text-xl xl:text-3xl md:pr-6 ">{t("PLACE")}</p>
+ 
+</div>
 
     </>
   )

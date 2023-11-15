@@ -60,4 +60,4 @@ async function sendToConfirmedCollection(data) {
 }
 
 export { sendToConfirmedCollection, connectToDatabase, db };
-export const revalidate = 10;
+

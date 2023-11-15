@@ -98,6 +98,14 @@ export default function Navbar() {
                 >
                  {t("DETAILS")}
                 </Link>
+                <Link
+                  href="/gallery"
+
+                  onClick={closeMenu}
+                  className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
+                >
+                 Gallery
+                </Link>
 
            
 
