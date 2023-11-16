@@ -58,7 +58,7 @@ export default function WhenWhere() {
 
         </div>
 
-        <div className=" hidden lg:grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32 ">
+        <div className=" hidden lg:grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32 pb-10 md:pb-16 ">
         
 
          <GoogleMap />
@@ -73,10 +73,7 @@ export default function WhenWhere() {
 
 
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32">
-  <p className="text-textb text-center pb-10 text-xl xl:text-3xl md:pr-6 ">{t("PLACE")}</p>
- 
-</div>
+    
 
     </>
   )

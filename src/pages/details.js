@@ -3,11 +3,16 @@ import Navbar from "@/components/Nav";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { Cormorant_Upright } from "next/font/google";
+import Cards from "@/components/Cards";
+
 
 const corm = Cormorant_Upright({
   weight: "400",
   subsets: ['latin'],
 })
+
+
+
 
 
 export default function Details() {
@@ -22,11 +27,19 @@ export default function Details() {
       </Head>
       <Navbar />
       <div className="pt-12 lg:pt-40 bg-maingreen"></div>
-      <section className='pt-12 mx-auto w-5/6'>
+      <div className=" bg-white bg-cover h-full"  style={{ backgroundImage: 'url("/bkg2.svg")' }}>
+      <section className='pt-12 mx-auto w-5/6 pb-12 md:pb-16'>
         <div className={corm.className}>
+        <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16 ">{t("DETAILS")}</h1>
+       
+
+       <Cards />
+
+
 
         </div>
       </section>
+      </div>
 
     </>
   )

@@ -131,7 +131,7 @@ export default function Rsvp({ data, confirmedData }) {
           <div className="mx-auto w-5/6 pt-10 md:pt-16 ">
             <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center">RSVP</h1>
 
-            <p className="text-textb text-center pt-6 text-xl md:text-3xl">{t("ATTENDENCE")}</p>
+            <p className="text-textb font-bold text-center pt-6 text-xl md:text-3xl">{t("ATTENDENCE")}</p>
           </div>
         </div>
         <div className="min-h-screen flex flex-col items-center  bg-white bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
