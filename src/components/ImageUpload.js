@@ -27,6 +27,11 @@ export default function ImageUpload ()  {
 
             if (response.ok) {
                 console.log('Image uploaded successfully');
+
+                const netlifyBuildHookUrlImage = 'https://api.netlify.com/build_hooks/6555dd753639bf618062dbaa';
+                await fetch(netlifyBuildHookUrlImage, { method: 'POST' });
+
+               
                 window.location.reload();
 
             } else {
