@@ -19,8 +19,8 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../vilad.jpg" alt="Mohana_sunset_trees" />
-            <h2 className="pt-44 md:pt-52">Ceremony</h2>
+            <img src="../rsvp-card.svg" alt="Mohana_sunset_trees" />
+            <h2 className="pt-44 md:pt-52">RSVP</h2>
           </div>
           <div className="contentBox">
             <div>
@@ -36,8 +36,8 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../vilad.jpg" alt="Mohana_sunset_trees" />
-            <h2 className="pt-44 md:pt-52">Ceremony</h2>
+            <img src="../ceremony-card.svg" alt="Mohana_sunset_trees" />
+            <h2 className="pt-44 md:pt-52">{t("CEREMONY")}</h2>
           </div>
           <div className="contentBox">
             <div>
@@ -53,8 +53,8 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../vilad.jpg" alt="Mohana_sunset_trees" />
-            <h2 className="pt-44 md:pt-52">Ceremony</h2>
+            <img src="../speech-card.svg" alt="Mohana_sunset_trees" />
+            <h2 className="pt-44 md:pt-52">{t("SPEECHES")}</h2>
           </div>
           <div className="contentBox">
             <div>
@@ -70,8 +70,8 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../vilad.jpg" alt="Mohana_sunset_trees" />
-            <h2 className="pt-44 md:pt-52">Ceremony</h2>
+            <img src="../kids-card.svg" alt="Mohana_sunset_trees" />
+            <h2 className="pt-44 md:pt-52">{t("KIDS")}</h2>
           </div>
           <div className="contentBox">
             <div>
@@ -87,8 +87,8 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../vilad.jpg" alt="Mohana_sunset_trees" />
-            <h2 className="pt-44 md:pt-52">Ceremony</h2>
+            <img src="../gallery-card.svg" alt="Mohana_sunset_trees" />
+            <h2 className="pt-44 md:pt-52">{t("GALLERY")}</h2>
           </div>
           <div className="contentBox">
             <div>
@@ -104,8 +104,8 @@ const Cards = () => {
         <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../vilad.jpg" alt="Mohana_sunset_trees" />
-            <h2 className="pt-44 md:pt-52">Ceremony</h2>
+            <img src="../dresscode-card.svg" alt="Mohana_sunset_trees" />
+            <h2 className="pt-44 md:pt-52">{t("ATTIRE")}</h2>
           </div>
           <div className="contentBox">
             <div>
