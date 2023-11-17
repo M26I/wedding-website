@@ -5,7 +5,7 @@ const Header = () => {
             <div className="hidden md:block lg:pt-36 pt-20">
   <div className="relative ">
     <Image
-      src="/collage3.svg"
+      src="/collage4.svg"
       alt="Collage"
       width={1550}
       height={1000}
