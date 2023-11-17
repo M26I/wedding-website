@@ -50,12 +50,28 @@ export default function Home() {
         </div>
 
         <div className="sticky top-0 h-screen ">
-          <div className="hidden md:block h-full bg-center bg-cover" style={{ backgroundImage: 'url("/newcollage.svg")' }}>
+          <div className='hidden md:block h-full bg-center'>
+          <div style={{width: '100%', height: '100%', position: 'relative'}}>
+          <Image
+          src="./newcollage1.svg"
+          fill
+          alt='collage'
+          style={{objectFit:"cover"}} />
 
+          
           </div>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="block md:hidden h-screen bg-center bg-cover" style={{ backgroundImage: 'url("/view-p.svg")' }}>
+          </div>
+          
+          <div className='block md:hidden h-full bg-center'>
+          <div style={{width: '100%', height: '100%', position: 'relative'}}>
+          <Image
+          src="./view-ph.svg"
+          fill
+          alt='collage'
+          style={{objectFit:"cover"}} />
 
+          
+          </div>
           </div>
 
         </div>
@@ -85,12 +101,28 @@ export default function Home() {
 
 
         <div className="sticky top-0 h-screen ">
-          <div className="hidden md:block h-full bg-center bg-cover" style={{ backgroundImage: 'url("/cabo.svg")' }}>
+        <div className='hidden md:block h-full bg-center'>
+          <div style={{width: '100%', height: '100%', position: 'relative'}}>
+          <Image
+          src="./cabo1.svg"
+          fill
+          alt='collage'
+          style={{objectFit:"cover"}} />
 
+          
           </div>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="block md:hidden h-full bg-center bg-cover" style={{ backgroundImage: 'url("/we-p.svg")' }}>
+          </div>
+          
+          <div className='block md:hidden h-full bg-center'>
+          <div style={{width: '100%', height: '100%', position: 'relative'}}>
+          <Image
+          src="./we-ph.svg"
+          fill
+          alt='collage'
+          style={{objectFit:"cover"}} />
 
+          
+          </div>
           </div>
 
         </div>
