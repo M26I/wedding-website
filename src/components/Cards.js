@@ -15,19 +15,21 @@ const Cards = () => {
 
   return (
     <Container>
-      {/* Add your card components here */}
+      
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../rsvp-card.svg" alt="Mohana_sunset_trees" />
+            <Image src="../rsvp-card.svg"
+             alt="mailbox image"
+             width={300} 
+             height={300}/>
             <h2 className="pt-44 md:pt-52">RSVP</h2>
           </div>
           <div className="contentBox">
             <div>
              
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit at, iste
-                possimus quis sapiente voluptatibus reprehenderit.
+                {t("RSVP_CARD")}
               </p>
             </div>
           </div>
@@ -36,15 +38,18 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../ceremony-card.svg" alt="Mohana_sunset_trees" />
+            <Image 
+            src="../ceremony-card.svg" 
+            alt="wedding bands image"
+            width={300}
+            height={300} />
             <h2 className="pt-44 md:pt-52">{t("CEREMONY")}</h2>
           </div>
           <div className="contentBox">
             <div>
              
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit at, iste
-                possimus quis sapiente voluptatibus reprehenderit.
+               {t("CEREMONY_CARD")}
               </p>
             </div>
           </div>
@@ -53,15 +58,18 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../speech-card.svg" alt="Mohana_sunset_trees" />
+            <Image 
+            src="../speech-card.svg" 
+            alt="speech image" 
+            width={300}
+            height={300}/>
             <h2 className="pt-44 md:pt-52">{t("SPEECHES")}</h2>
           </div>
           <div className="contentBox">
             <div>
               
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit at, iste
-                possimus quis sapiente voluptatibus reprehenderit.
+                {t("SPEECH_CARD")}
               </p>
             </div>
           </div>
@@ -70,15 +78,18 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../kids-card.svg" alt="Mohana_sunset_trees" />
+            <Image 
+            src="../kids-card.svg" 
+            alt="Kid image" 
+            width={300}
+            height={300}/>
             <h2 className="pt-44 md:pt-52">{t("KIDS")}</h2>
           </div>
           <div className="contentBox">
             <div>
              
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit at, iste
-                possimus quis sapiente voluptatibus reprehenderit.
+               {t("KIDS_CARD")}
               </p>
             </div>
           </div>
@@ -87,15 +98,18 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../gallery-card.svg" alt="Mohana_sunset_trees" />
+            <Image
+             src="../gallery-card.svg"
+              alt="Taking photo with mobile phone image" 
+              width={300}
+              height={300}/>
             <h2 className="pt-44 md:pt-52">{t("GALLERY")}</h2>
           </div>
           <div className="contentBox">
             <div>
               
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit at, iste
-                possimus quis sapiente voluptatibus reprehenderit.
+                {t("GALLERY_CARD")}
               </p>
             </div>
           </div>
@@ -104,21 +118,24 @@ const Cards = () => {
         <div className="card">
         <div className="box">
           <div className="imgBox">
-            <img src="../dresscode-card.svg" alt="Mohana_sunset_trees" />
+            <Image
+             src="../dresscode-card.svg"
+             alt="Image of wardrobe" 
+             width={300}
+             height={300}/>
             <h2 className="pt-44 md:pt-52">{t("ATTIRE")}</h2>
           </div>
           <div className="contentBox">
             <div>
              
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit at, iste
-                possimus quis sapiente voluptatibus reprehenderit.
+                {t("ATTIRE_CARD")}
               </p>
             </div>
           </div>
         </div>
       </div>
-      {/* Repeat the above structure for each card */}
+      
     </Container>
   );
 };

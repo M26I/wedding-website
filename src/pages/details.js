@@ -31,12 +31,7 @@ export default function Details() {
       <section className='pt-12 mx-auto w-5/6 pb-12 md:pb-16'>
         <div className={corm.className}>
         <h1 className="uppercase  text-4xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16 pb-10 md:pb-26">{t("DETAILS")}</h1>
-       
-
-       <Cards />
-
-
-
+        <Cards />
         </div>
       </section>
       </div>
