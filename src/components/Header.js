@@ -17,11 +17,11 @@ const Header = () => {
 </div>
 
             <div className='block md:hidden'>
-                <div className=" h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/head-p.svg")' }}>
+                <div className=" h-screen bg-cover bg-center" style={{ backgroundImage: 'url("/head-ph.svg")' }}>
                 
 
                 </div>
-                <div className="absolute inset-0 bg-black opacity-40"></div>
+               
 
             </div>
         </>
