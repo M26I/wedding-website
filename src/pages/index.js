@@ -27,9 +27,11 @@ export default function Home() {
     <>
       <Head>
         <title>Marija & Liam - Wedding website</title>
-        <meta name="description" content="Info and RSVP for wedding of Marija and Liam" />
+        <meta name="description" content="Info and RSVP for wedding of Marija and Liam- home" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" purpose="maskable" />
+        <meta name="theme-color" content="#1D3539" />
+        <link rel="manifest" href="/manifest.json"></link>
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <Navbar />
 

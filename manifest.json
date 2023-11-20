@@ -1,0 +1,23 @@
+
+{
+    "name": "Wedding website- Marija & Liam ",
+    "short_name": "Marija & Liam",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1D3539",
+    "icons": [
+      {
+        "src": "/logo2.svg",
+        "sizes": "125x120",
+        "type": "svg"
+      },
+      {
+        "src": "/logo2.svg",
+        "sizes": "125x120",
+        "type": "svg",
+        "purpose": "maskable"
+      }
+    ]
+  }
+  

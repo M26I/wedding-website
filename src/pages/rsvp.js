@@ -121,8 +121,11 @@ export default function Rsvp({ data, confirmedData }) {
     <>
       <Head>
         <title>{`Marija & Liam - ${t("M_TITLE_RSVP")}`}</title>
+        <meta name="description" content="Info and RSVP for wedding of Marija and Liam-RSVP" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" purpose="maskable" />
+        <link rel="icon" href="/favicon.svg"  />
+        <meta name="theme-color" content="#1D3539" />
+        <link rel="manifest" href="/manifest.json"></link>
       </Head>
       <Navbar />
       <section className={corm.className}>

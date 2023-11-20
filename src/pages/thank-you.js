@@ -18,7 +18,9 @@ export default function ThankYou() {
         <title>{`Marija & Liam - ${t("M_TITLE_THANKS")}`}</title>
         <meta name="description" content="Thank you page after confirmation" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.svg" purpose="maskable"/>
+        <link rel="icon" href="/favicon.svg" />
+        <meta name="theme-color" content="#1D3539" />
+        <link rel="manifest" href="/manifest.json"></link>
       </Head>
       <Navbar />
 

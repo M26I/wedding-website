@@ -212,6 +212,7 @@ export default function Navbar() {
                 aria-label="home link"
                 title=" home link"
                 alt=" home link"
+                role="link" 
               ></div>
             </Link>
           </div>
@@ -228,6 +229,7 @@ export default function Navbar() {
               className="menu-btn"
               onClick={() => setShowMenu(!showMenu)}
               aria-label="Toggle Mobile Menu"
+              role="button" 
             >
               <div>
                 <Hamburger isOpen={showMenu} />
