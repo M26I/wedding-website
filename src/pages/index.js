@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
-import { Inter, Alex_Brush, Cormorant_Upright } from 'next/font/google'
+import { Cormorant_Upright } from 'next/font/google'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import Header from '@/components/Header'
@@ -28,7 +27,7 @@ export default function Home() {
     <>
       <Head>
         <title>Marija & Liam - Wedding website</title>
-        <meta name="description" content="" />
+        <meta name="description" content="Info and RSVP for wedding of Marija and Liam" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" purpose="maskable" />
       </Head>
@@ -51,27 +50,27 @@ export default function Home() {
 
         <div className="sticky top-0 h-screen ">
           <div className='hidden md:block h-full bg-center'>
-          <div style={{width: '100%', height: '100%', position: 'relative'}}>
-          <Image
-          src="./newcollage1.svg"
-          fill
-          alt='collage'
-          style={{objectFit:"cover"}} />
+            <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+              <Image
+                src="./newcollage1.svg"
+                fill
+                alt='collage'
+                style={{ objectFit: "cover" }} />
 
-          
+
+            </div>
           </div>
-          </div>
-          
+
           <div className='block md:hidden h-full bg-center'>
-          <div style={{width: '100%', height: '100%', position: 'relative'}}>
-          <Image
-          src="./view-ph.svg"
-          fill
-          alt='collage'
-          style={{objectFit:"cover"}} />
+            <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+              <Image
+                src="./view-ph.svg"
+                fill
+                alt='collage'
+                style={{ objectFit: "cover" }} />
 
-          
-          </div>
+
+            </div>
           </div>
 
         </div>
@@ -101,28 +100,28 @@ export default function Home() {
 
 
         <div className="sticky top-0 h-screen ">
-        <div className='hidden md:block h-full bg-center'>
-          <div style={{width: '100%', height: '100%', position: 'relative'}}>
-          <Image
-          src="./cabo1.svg"
-          fill
-          alt='collage'
-          style={{objectFit:"cover"}} />
+          <div className='hidden md:block h-full bg-center'>
+            <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+              <Image
+                src="./cabo1.svg"
+                fill
+                alt='collage'
+                style={{ objectFit: "cover" }} />
 
-          
+
+            </div>
           </div>
-          </div>
-          
+
           <div className='block md:hidden h-full bg-center'>
-          <div style={{width: '100%', height: '100%', position: 'relative'}}>
-          <Image
-          src="./we-ph.svg"
-          fill
-          alt='collage'
-          style={{objectFit:"cover"}} />
+            <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+              <Image
+                src="./we-ph.svg"
+                fill
+                alt='collage'
+                style={{ objectFit: "cover" }} />
 
-          
-          </div>
+
+            </div>
           </div>
 
         </div>

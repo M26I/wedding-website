@@ -1,18 +1,17 @@
-import Head from "next/head";
 import Script from "next/script";
 
 function GoogleMap() {
   return (
     <>
-     
-        <Script async defer src="https://maps.googleapis.com/maps/api/js"></Script>
-      
+
+      <Script async defer src="https://maps.googleapis.com/maps/api/js"></Script>
+
       <div className="w-full max-w-screen-sm mx-auto md:max-w-screen-md lg:max-w-screen-lg">
         <div
           className="w-full md:aspect-w-16 md:aspect-h-12 lg:aspect-w-16 lg:aspect-h-10"
           style={{
             position: "relative",
-            paddingBottom: "54%", 
+            paddingBottom: "54%",
           }}
         >
           <iframe

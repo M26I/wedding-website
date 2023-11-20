@@ -11,44 +11,44 @@ import { useRouter } from "next/router";
 
 
 const corm = Cormorant_Upright({
-    weight: "400",
-    subsets: ['latin'],
-  })
+  weight: "400",
+  subsets: ['latin'],
+})
 
 
 
 
 export default function Navbar() {
-    const { t } = useTranslation('common'); 
-    const router = useRouter();
-    const [selectedLocale, setSelectedLocale] = useState(router.locale);
+  const { t } = useTranslation('common');
+  const router = useRouter();
+  const [selectedLocale, setSelectedLocale] = useState(router.locale);
 
-    useEffect(() => {
-      setSelectedLocale(router.locale);
-    }, [router.locale]);
-  
-    const handleLocaleChange = (e) => {
-      const newLocale = e.target.value;
-      router.push(
-        {
-          pathname: router.pathname,
-          query: router.query,
-        },
-        null,
-        { locale: newLocale }
-      );
-      setSelectedLocale(newLocale);
-    };
-   
-  
+  useEffect(() => {
+    setSelectedLocale(router.locale);
+  }, [router.locale]);
 
-  
+  const handleLocaleChange = (e) => {
+    const newLocale = e.target.value;
+    router.push(
+      {
+        pathname: router.pathname,
+        query: router.query,
+      },
+      null,
+      { locale: newLocale }
+    );
+    setSelectedLocale(newLocale);
+  };
 
-    
-    
 
-   
-    
+
+
+
+
+
+
+
+
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -80,7 +80,7 @@ export default function Navbar() {
 
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200 "
                 ><span className="border-2 border-textb p-2">RSVP</span>
-                  
+
                 </Link>
                 <Link
                   href="/when&where"
@@ -88,7 +88,7 @@ export default function Navbar() {
                   onClick={closeMenu}
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
                 >
-                 {t("WHEN_WHERE")}
+                  {t("WHEN_WHERE")}
                 </Link>
                 <Link
                   href="/details"
@@ -96,7 +96,7 @@ export default function Navbar() {
                   onClick={closeMenu}
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
                 >
-                 {t("DETAILS")}
+                  {t("DETAILS")}
                 </Link>
                 <Link
                   href="/gallery"
@@ -104,10 +104,10 @@ export default function Navbar() {
                   onClick={closeMenu}
                   className="px-4 link link--underline block mt-4 lg:inline-block lg:mt-0 hover:text-stone-200"
                 >
-                 Gallery
+                  Gallery
                 </Link>
 
-           
+
 
 
 
@@ -156,35 +156,35 @@ export default function Navbar() {
 
               >
                 RSVP
-               
+
               </Link>
               <Link
                 href="/when&where"
                 className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw"
 
               >
-               {t("WHEN_WHERE")}
+                {t("WHEN_WHERE")}
               </Link>
               <Link
                 href="/details"
                 className="px-4  block mt-4 lg:inline-block lg:mt-0 hover:text-offw "
 
               >
-               {t("DETAILS")}
+                {t("DETAILS")}
               </Link>
 
-             
 
 
-<select
-        className='bg-maingreen  cursor-pointer text-offw'
-        value={selectedLocale}
-        onChange={handleLocaleChange}
-      >
-        <option className="p-2 text-lg" value='en'>EN</option>
-        <option className="p-2 text-lg" value='hr'>HR</option>
-      </select>
-                      
+
+              <select
+                className='bg-maingreen  cursor-pointer text-offw'
+                value={selectedLocale}
+                onChange={handleLocaleChange}
+              >
+                <option className="p-2 text-lg" value='en'>EN</option>
+                <option className="p-2 text-lg" value='hr'>HR</option>
+              </select>
+
 
 
 
@@ -216,14 +216,14 @@ export default function Navbar() {
             </Link>
           </div>
           <select
-        className='bg-maingreen  cursor-pointer mr-20 text-textb text-xl  '
-        value={selectedLocale}
-        onChange={handleLocaleChange}
-      >
-        <option  value='en'>en</option>
-        <option  value='hr'>hr</option>
-      </select>
-          <div className="p-5 right-0 fixed">            
+            className='bg-maingreen  cursor-pointer mr-20 text-textb text-xl  '
+            value={selectedLocale}
+            onChange={handleLocaleChange}
+          >
+            <option value='en'>en</option>
+            <option value='hr'>hr</option>
+          </select>
+          <div className="p-5 right-0 fixed">
             <div
               className="menu-btn"
               onClick={() => setShowMenu(!showMenu)}
