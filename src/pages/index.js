@@ -37,7 +37,7 @@ export default function Home() {
 
         <Header />
 
-        <div className="sticky top-0  bg-white h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
+        <div className="sticky top-0  bg-white h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.webp")' }}>
           <section className={corm.className}>
             <div className='mx-auto w-5/6 pt-10 pb-10 md:pb-20 md:pt-20'>
               <h1 className=' uppercase  text-2xl  font-bold md:text-5xl text-textb text-center'>{t("MAIN_TITLE")}</h1>
@@ -52,7 +52,7 @@ export default function Home() {
           <div className='hidden md:block h-full bg-center'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
               <Image
-                src="./newcollage1.svg"
+                src="/newcollage1.webp"
                 fill
                 alt='collage'
                 style={{ objectFit: "cover" }} />
@@ -64,7 +64,7 @@ export default function Home() {
           <div className='block md:hidden h-full bg-center'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
               <Image
-                src="./view-ph.svg"
+                src="/view-ph.webp"
                 fill
                 alt='collage'
                 style={{ objectFit: "cover" }} />
@@ -74,13 +74,13 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="sticky top-0 bg-white h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
+        <div className="sticky top-0 bg-white h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.webp")' }}>
           <section className='pt-12 mx-auto w-5/6 pb-12 md:pb-20'>
             <div className={corm.className}>
               <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-16 pb-10">
                 <p className="text-textb text-center pb-6 text-xl xl:text-3xl md:pr-6  xl:pt-14 lg:pt-8">{t("PLACE_HOME")}</p>
                 <Image
-                  src="/vilad.jpg"
+                  src="/vilad.webp"
                   alt="Vila Dalmatia"
                   width={800}
                   height={600}
@@ -103,7 +103,7 @@ export default function Home() {
           <div className='hidden md:block h-full bg-center'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
               <Image
-                src="./cabo1.svg"
+                src="/cabo1.webp"
                 fill
                 alt='collage'
                 style={{ objectFit: "cover" }} />
@@ -115,7 +115,7 @@ export default function Home() {
           <div className='block md:hidden h-full bg-center'>
             <div style={{ width: '100%', height: '100%', position: 'relative' }}>
               <Image
-                src="./we-ph.svg"
+                src="/we-ph.webp"
                 fill
                 alt='collage'
                 style={{ objectFit: "cover" }} />
@@ -126,7 +126,7 @@ export default function Home() {
 
         </div>
 
-        <div className="sticky top-0 h-full bg-white pb-16 h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
+        <div className="sticky top-0 h-full bg-white pb-16 h-full bg-center bg-cover" style={{ backgroundImage: 'url("/bkg2.webp")' }}>
           <div className={corm.className}>
             <h2 className='text-center text-textb text-2xl md:text-5xl font-bold uppercase pb-16 pt-16'>{t("TIMELINE")}</h2>
             <VerticalTimeline />

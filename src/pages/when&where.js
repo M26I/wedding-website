@@ -27,7 +27,7 @@ export default function WhenWhere() {
       <Navbar />
       <div className="pt-12 lg:pt-40 bg-maingreen"></div>
 
-      <div className=" bg-white bg-cover h-full" style={{ backgroundImage: 'url("/bkg2.svg")' }}>
+      <div className=" bg-white bg-cover h-full" style={{ backgroundImage: 'url("/bkg2.webp")' }}>
         <section className='pt-12 mx-auto w-5/6 pb-10 md:pb-'>
           <div className={corm.className}>
             <h1 className="uppercase  text-2xl  font-bold md:text-5xl text-textb text-center pt-10 md:pt-16 ">{t("WHEN_WHERE")}</h1>
@@ -35,7 +35,7 @@ export default function WhenWhere() {
             <div className="grid lg:grid-cols-2 grid-cols-1 pt-10 md:pt-32">
               <p className="text-textb text-center pb-10 text-xl xl:text-3xl md:pr-6 ">{t("PLACE")}</p>
               <Image
-                src="/vilad.jpg"
+                src="/vilad.webp"
                 alt="Vila Dalmatia"
                 width={800}
                 height={600}

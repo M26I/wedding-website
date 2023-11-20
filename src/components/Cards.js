@@ -19,7 +19,7 @@ const Cards = () => {
       <div className="card">
         <div className="box">
           <div className="imgBox">
-            <Image src="../rsvp-card.svg"
+            <Image src="/rsvp-card.webp"
               alt="mailbox image"
               width={300}
               height={300} />
@@ -38,7 +38,7 @@ const Cards = () => {
         <div className="box">
           <div className="imgBox">
             <Image
-              src="../ceremony-card.svg"
+              src="/ceremony-card.webp"
               alt="wedding bands image"
               width={300}
               height={300} />
@@ -57,7 +57,7 @@ const Cards = () => {
         <div className="box">
           <div className="imgBox">
             <Image
-              src="../speech-card.svg"
+              src="/speech-card.webp"
               alt="speech image"
               width={300}
               height={300} />
@@ -77,7 +77,7 @@ const Cards = () => {
         <div className="box">
           <div className="imgBox">
             <Image
-              src="../kids-card.svg"
+              src="/kids-card.webp"
               alt="Kid image"
               width={300}
               height={300} />
@@ -97,7 +97,7 @@ const Cards = () => {
         <div className="box">
           <div className="imgBox">
             <Image
-              src="../gallery-card.svg"
+              src="/gallery-card.webp"
               alt="Taking photo with mobile phone image"
               width={300}
               height={300} />
@@ -117,7 +117,7 @@ const Cards = () => {
         <div className="box">
           <div className="imgBox">
             <Image
-              src="../dresscode-card.svg"
+              src="/dresscode-card.webp"
               alt="Image of wardrobe"
               width={300}
               height={300} />
