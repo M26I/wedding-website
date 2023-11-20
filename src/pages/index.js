@@ -31,7 +31,6 @@ export default function Home() {
         <meta name="description" content="Info and RSVP for wedding of Marija and Liam- home" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1D3539" />
-        <link rel="manifest" href="../../manifest.json"></link>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Navbar />

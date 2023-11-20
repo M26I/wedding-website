@@ -26,7 +26,7 @@ export default function Details() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
         <meta name="theme-color" content="#1D3539" />
-        <link rel="manifest" href="/manifest.json"></link>
+       
       </Head>
       <Navbar />
       <div className="pt-12 lg:pt-40 bg-maingreen"></div>

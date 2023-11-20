@@ -125,7 +125,7 @@ export default function Rsvp({ data, confirmedData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg"  />
         <meta name="theme-color" content="#1D3539" />
-        <link rel="manifest" href="/manifest.json"></link>
+       
       </Head>
       <Navbar />
       <section className={corm.className}>
