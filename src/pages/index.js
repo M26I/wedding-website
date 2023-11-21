@@ -35,6 +35,8 @@ export default function Home() {
         <meta property="og:title" content="Our wedding website - Marija & Liam" />
         <meta property="og:description" content="Please join us as we celebrate beginning our new adventure" />
         <meta property="og:image" content="https://655b48561c67be0008055a7c--peaceful-mochi-06dba0.netlify.app/og-image.webp" />
+        <meta property="og:image:width" content="350" />
+        <meta property="og:image:height" content="500" />
         <meta property="og:url" content="https://655b48561c67be0008055a7c--peaceful-mochi-06dba0.netlify.app/" />
         <meta property="og:type" content="website" />
       </Head>
