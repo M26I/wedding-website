@@ -10,7 +10,7 @@ const Header = () => {
             width={1550}
             height={1000}
 
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', width: '100%' }}
           />
 
         </div>
