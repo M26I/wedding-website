@@ -13,43 +13,43 @@ const VerticalTimeline = () => {
 
   const timelineData = [
     {
-      time: '17:00',
+      time: '18:00',
       title: 'Welcome',
       description: t('WELCOME'),
       icon: '/welcome.svg',
     },
     {
-      time: '18:00',
+      time: '19:00',
       title: 'Ceremony',
       description: t("CEREMONY"),
       icon: '/ceremony.svg',
     },
     {
-      time: '18:30',
+      time: '19:30',
       title: 'photos',
       description: t("PHOTOS"),
       icon: '/photos.svg',
     },
     {
-      time: '19:30',
+      time: '20:30',
       title: 'Dinner',
       description: t("DINNER"),
       icon: '/dinner.svg',
     },
     {
-      time: '20:30',
+      time: '21:30',
       title: 'First dance',
       description: t("FIRST_DANCE"),
       icon: '/dance.svg',
     },
     {
-      time: '21:00',
+      time: '22:00',
       title: 'Party',
       description: t("PARTY"),
       icon: '/party.svg',
     },
     {
-      time: '22:00',
+      time: '23:00',
       title: 'Cutting cake',
       description: t("CUTTING_CAKE"),
       icon: '/cake.svg',
